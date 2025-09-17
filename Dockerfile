@@ -12,8 +12,7 @@ RUN mkdir -p /tmp/check && \
     chown -R node:node /usr/local/lib/node_modules/n8n/node_modules/n8n-editor-ui/dist/
 	
 ENV PYTHONUNBUFFERED=1
-RUN apk add --update --no-cache python3 curl ffmpeg wget
-RUN python3 -m ensurepip 
-RUN pip3 install --no-cache --break-system-packages --upgrade pip setuptools speedtest-cli 
+RUN apk add --update --no-cache python3 pip3 curl ffmpeg wget
+RUN pip3 install --no-cache --upgrade  --break-system-packages pip setuptools speedtest-cli 
 
 USER node
