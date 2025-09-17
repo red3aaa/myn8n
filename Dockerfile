@@ -13,7 +13,7 @@ RUN mkdir -p /tmp/check && \
 	
 ENV PYTHONUNBUFFERED=1
 RUN apk add --update --no-cache python3 curl ffmpeg wget
-RUN python3 --break-system-packages -m ensurepip 
+RUN python3 -m ensurepip 
 RUN pip3 install --no-cache --break-system-packages --upgrade pip setuptools speedtest-cli 
 
 USER node
