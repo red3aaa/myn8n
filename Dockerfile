@@ -16,3 +16,4 @@ RUN apk add --update --no-cache python3 py3-pip curl ffmpeg wget
 RUN pip3 install --no-cache --upgrade  --break-system-packages pip setuptools speedtest-cli 
 
 USER node
+cmd n8n start --headless
